@@ -38,6 +38,32 @@ const DownloadAppIcon =({size})=>{
          <svg role="img" height={size} width={size} xmlns="http://www.w3.org/2000/svg"  fill= "currentcolor" viewBox="0 0 24 24" class="Svg-sc-1bi12j5-0 hDgDGI"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z"></path><path d="M12 6.05a1 1 0 011 1v7.486l1.793-1.793a1 1 0 111.414 1.414L12 18.364l-4.207-4.207a1 1 0 111.414-1.414L11 14.536V7.05a1 1 0 011-1z"></path></svg>
     )
 }
+const PrevIcon =({size})=>{
+    return(
+        <svg role="img" height={size} width={size} xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24"><path d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z"></path></svg>
+    )
+}
+const NextIcon = ({size})=>{
+    return(
+        <svg role="img" height={size} width={size} xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24"><path d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z"></path></svg>
+    )
+}
+const DropDownIcon =({size})=>{
+    return (
+        <svg role="img" height={size} width={size} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M14 6l-6 6-6-6h12z"></path></svg>
+    )
+}
+const ExternalIcon =({size})=>{
+    return(
+        <svg role="img" height={size} width={size} xmlns="http://www.w3.org/2000/svg" fill="currentColor" ><path d="M1 2.75A.75.75 0 011.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 01-.75.75H1.75a.75.75 0 01-.75-.75V2.75z"></path><path d="M15 1v4.993a.75.75 0 11-1.5 0V3.56L8.78 8.28a.75.75 0 01-1.06-1.06l4.72-4.72h-2.433a.75.75 0 010-1.5H15z"></path></svg>
+    )
+}
+
+const PlayIcon= ({size}) =>{
+    return(
+        <svg role="img" height={size} width={size} xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"></path></svg>
+    )
+}
 
 const Icon =({name,size = 24})=>{
     const icons = {
@@ -46,7 +72,13 @@ const Icon =({name,size = 24})=>{
         library : LibraryIcon,
         playlist : CreatePlayListIcon,
         songs : LikedSongs,
-        download: DownloadAppIcon
+        download: DownloadAppIcon,
+        prev: PrevIcon,
+        next : NextIcon,
+        dropdown: DropDownIcon,
+        external:ExternalIcon,
+        play : PlayIcon
+
     }
 
     const Component = icons[name]
