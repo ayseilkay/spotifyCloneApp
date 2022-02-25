@@ -143,6 +143,11 @@ const PlayerIcon =({size})=>{
         <svg role="img" height={size} width={size} xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"></path></svg>
     )
 }
+const ArrowLeftIcon = ({size}) =>{
+   return(
+    <svg height="24" role="img" width="24" viewBox="0 0 24 24" class="NNvUDfAdec3FmdZ24oZc"  fill="currentColor"><polygon points="7.96,21.151 7.311,20.39 16.865,12.229 7.311,4.069 7.96,3.309 18.405,12.229 "></polygon></svg>
+   )
+}
 const Icon =({name,size = 24})=>{
     const icons = {
         home: HomeIcon,
@@ -170,6 +175,7 @@ const Icon =({name,size = 24})=>{
         volumeNormal:VolumeNormalIcon,
         volumeFull:VolumeFullIcon,
         lyrics:LyricsIcon,
+        arrowIcon: ArrowLeftIcon
 
 
 

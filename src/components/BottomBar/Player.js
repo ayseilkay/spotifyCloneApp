@@ -1,17 +1,30 @@
 import CustomRange from 'components/CustomRange';
-import {useMemo, useState} from 'react'
+import {useEffect, useMemo, useState} from 'react'
 import {useAudio} from 'react-use';
 import { Icon } from 'Icon'
 import secondsToTime from 'utils';
+import { useDispatch, useSelector } from 'react-redux';
+import { setControls } from 'components/stores/player';
 function Player() {
   const STEP = 0.1;
   const MIN = 0;
+
+  const dispatch = useDispatch()
+  const {current} = useSelector(state => state.player)
   // const [values,setValues] = useState([50]);//artık react-use dan gelen state deki time benim values degerim olacak
   const [audio, state, controls, ref] = useAudio({
-    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    src: current?.src ,
     autoPlay: true,
   });
 
+  useEffect(()=>{
+    controls.play()
+  },[current])
+
+  // useEffect(()=>{
+  //   // dispatch(setControls(controls))
+  // })
+ 
   const volumeIcon = useMemo(()=>{
       if(state.volume === 0 || state.muted){
           return 'volumeMute'
@@ -27,12 +40,32 @@ function Player() {
       }
   },[state.volume,state.muted])
   return (
-    <div className='flex justify-between items-center h-full px-4'>
-        Player
+    <div className='flex px-4 justify-between items-center h-full '>
         <div className='min-w-[11.25rem] w-[30%]'> 
-           sol
+           
+                {current && (
+                  <div className='flex items-center'>
+                      <div className='flex items-center mr-3'>
+                    <div className='w-14 h-14 mr-3 relative group flex-shrink-0'>
+                    <button className='w-6 b-6 bg-black opacity-0 group-hover:opacity-100  hover:scale-[1.06] rotate-90 rounded-full absolute top-1 right-1  flex items-center justify-center mr-4'>
+                      <Icon name={"arrowIcon"} size={24} />
+                    </button>
+                    <img style={{width:"50px"}} src={current.image}/>
+                    
+                    </div>
+                        <div style={{marginLeft:"10px"}}>
+                          <h6 className='text-sm line-clamp-1'>{current.title}</h6>
+                          <p className='text-[0.688rem] text-white text-opacity-70'>{current.artist}</p>
+                        </div>
+                  </div>
+                  <button className='w-8 h-8 items-center justify-center text-white text-opacity-70 hover:text-opacity-100 px-1'> <Icon name={"heartFilled"} size={"16"}/></button>
+                  <button className='w-8 h-8 items-center justify-center text-white text-opacity-70 hover:text-opacity-100 px-1'> <Icon name={"pictureInpicture"} size={"16"}/></button>
+                  </div>
+                  
+                ) }
+             
         </div>
-        <div className='max-w-[45.125rem] w-[40%] flex flex-col items-center'>
+        <div className='max-w-[45.125rem] w-[40%] flex flex-col px-4 items-center'>
            <div className='flex items-center gap-x-2'>
               <button className='w-8 h-8 items-center justify-center text-white text-opacity-70 hover:text-opacity-100'> <Icon name={"shuffle"} size={"16"}/></button>
               <button className='w-8 h-8 items-center justify-center text-white text-opacity-70 hover:text-opacity-100 '> <Icon name={"playerPrev"} size={"16"}/></button>
