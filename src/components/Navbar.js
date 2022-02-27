@@ -1,8 +1,10 @@
-import { Icon } from 'Icon'
+
 import React from 'react'
 import Auth from './Navbar/Auth'
 import Navigation from './Navbar/Navigation'
 import { useMatch } from "react-router-dom";
+import Search from './Navbar/Search';
+
 function Navbar() {
   const searchRoute = useMatch({path: '/search'})
   return (
@@ -10,7 +12,7 @@ function Navbar() {
       <Navigation/>
       {
         searchRoute && (
-          <div> search kısmındasın</div>
+            <Search/>
         )
       }
       <Auth/>

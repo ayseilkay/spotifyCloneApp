@@ -1,11 +1,14 @@
 import spotifyLogo from 'components/img/logo.svg'
 import { Icon } from 'Icon'
 import React from 'react'
+import { useSelector } from 'react-redux'
 import DownloadApp from './Sidebar/DownloadApp'
 import Menu from './Sidebar/Menu'
 import Playlist from './Sidebar/Playlist'
-
+import SidebarCover from './Sidebar/SidebarCover'
 function Sidebar() {
+
+    const {sidebar} = useSelector(state => state.player);
   return (
     <aside className='w-60 pt-6 flex-shrink-0 flex flex-col bg-black '>
         <a href='#' className='mb-7 px-6'>
@@ -32,6 +35,7 @@ function Sidebar() {
         </nav>
         <Playlist/>
         <DownloadApp/>
+        {sidebar && <SidebarCover/>}
     </aside>
   )
 }
