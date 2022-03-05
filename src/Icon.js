@@ -145,7 +145,7 @@ const PlayerIcon =({size})=>{
 }
 const ArrowLeftIcon = ({size}) =>{
    return(
-    <svg height="24" role="img" width="24" viewBox="0 0 24 24"  fill="currentColor"><polygon points="7.96,21.151 7.311,20.39 16.865,12.229 7.311,4.069 7.96,3.309 18.405,12.229 "></polygon></svg>
+    <svg height={size} width={size} viewBox="0 0 24 24"  fill="currentColor"><polygon points="7.96,21.151 7.311,20.39 16.865,12.229 7.311,4.069 7.96,3.309 18.405,12.229 "></polygon></svg>
    )
 }
 const Icon =({name,size = 24})=>{
