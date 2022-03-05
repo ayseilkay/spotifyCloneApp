@@ -26,13 +26,13 @@ export default [
     {
         id:5,
         title:"Discover",
-        cover:"	https://t.scdn.co/images/d0fb2ab104dc4846bdc56d72b0b0d785.jpeg",
+        cover:"https://t.scdn.co/images/d0fb2ab104dc4846bdc56d72b0b0d785.jpeg",
         color:"rgb(141, 103, 171)"
     },
     {
         id:6,
         title:"Concerts",
-        cover:"	https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c",
+        cover:"https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c",
         color:"rgb(30, 50, 100)"
     },
     {
@@ -50,7 +50,7 @@ export default [
     {
         id:9,
         title:"Mood",
-        cover:"	https://i.scdn.co/image/ab67706f00000002aa93fe4e8c2d24fc62556cba",
+        cover:"https://i.scdn.co/image/ab67706f00000002aa93fe4e8c2d24fc62556cba",
         color:"rgb(141, 103, 171)"
     },
     {
@@ -104,7 +104,7 @@ export default [
     {
         id:18,
         title:"Concerts",
-        cover:"	https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c",
+        cover:"https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c",
         color:"rgb(30, 50, 100)"
     },
     {
@@ -122,7 +122,7 @@ export default [
     {
         id:21,
         title:"Mood",
-        cover:"	https://i.scdn.co/image/ab67706f00000002aa93fe4e8c2d24fc62556cba",
+        cover:"https://i.scdn.co/image/ab67706f00000002aa93fe4e8c2d24fc62556cba",
         color:"rgb(141, 103, 171)"
     },
     {
@@ -176,7 +176,7 @@ export default [
     {
         id:30,
         title:"Concerts",
-        cover:"	https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c",
+        cover:"https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c",
         color:"rgb(30, 50, 100)"
     },
     {
@@ -194,7 +194,7 @@ export default [
     {
         id:33,
         title:"Mood",
-        cover:"	https://i.scdn.co/image/ab67706f00000002aa93fe4e8c2d24fc62556cba",
+        cover:"https://i.scdn.co/image/ab67706f00000002aa93fe4e8c2d24fc62556cba",
         color:"rgb(141, 103, 171)"
     },
     {
